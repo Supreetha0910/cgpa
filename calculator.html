@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CGPA CALCULATOR</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <style>
+      body
+      {
+        background-image: url('dark.jpg'); 
+       background-repeat: no-repeat;
+       background-size: cover;
+        color: azure;
+      }
+      #demo
+      {
+          color: cyan;
+      }
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <center>
+            <h2 id ="demo">CGPA Calculator</h2>
+        </center>
+        <br>
+        <br>
+        
+        <form class="form-horizontal" id="cgpa">
+            <div class="form-group">
+                <label id="demo" class="control-label col-sm-3">SEM 1</label>
+                <div class="col-sm-6">
+                    <input type ="text" class="form-control" id="sem1" placeholder="Enter gpa of Sem 1" name="sem1">
+                 </div>
+            </div>
+            <div class="form-group">
+                <label id="demo" class="control-label col-sm-3">SEM 2</label>
+                <div class="col-sm-6">
+                    <input type ="text" class="form-control" id="sem2" placeholder="Enter gpa of Sem 2" name="sem2">
+                 </div>
+            </div>
+            <div class="form-group">
+                <label id="demo" class="control-label col-sm-3">SEM 3</label>
+                <div class="col-sm-6">
+                    <input type ="text" class="form-control" id="sem3" placeholder="Enter gpa of Sem 3" name="sem3">
+                 </div>
+            </div>
+            <div class="form-group">
+                <label id="demo" class="control-label col-sm-3">SEM 4</label>
+                <div class="col-sm-6">
+                    <input type ="text" class="form-control" id="sem4" placeholder="Enter gpa of Sem 4" name="sem4">
+                 </div>
+            </div>
+            <div class="form-group">
+                <label id="demo" class="control-label col-sm-3">SEM 5</label>
+                <div class="col-sm-6">
+                    <input type ="text" class="form-control" id="sem5" placeholder="Enter gpa of Sem 5" name="sem5">
+                 </div>
+            </div>
+            <div class="form-group">
+                <label id="demo" class="control-label col-sm-3">SEM 6</label>
+                <div class="col-sm-6">
+                    <input type ="text" class="form-control" id="sem6" placeholder="Enter gpa of Sem 6" name="sem6">
+                 </div>
+            </div>
+            <div class="form-group">
+                <label id="demo" class="control-label col-sm-3">SEM 7</label>
+                <div class="col-sm-6">
+                    <input type ="text" class="form-control" id="sem7" placeholder="Enter gpa of Sem 7" name="sem7">
+                 </div>
+            </div>
+            <div class="form-group">
+                <label id="demo" class="control-label col-sm-3">SEM 8</label>
+                <div class="col-sm-6">
+                    <input type ="text" class="form-control" id="sem8" placeholder="Enter gpa of Sem 8" name="sem8">
+                 </div>
+            </div>
+            <div class="form-group">
+                <label id="demo" class="control-label col-sm-3">No. of semester you have entered</label>
+                <div class="col-sm-6">
+                    <input type ="text" class="form-control" id="enter" placeholder="enter no. of sems" name="enter">
+                 </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button id="cal" type="button" style="background-color: beige; color:000000" class="btn btn-default" onclick="eva()">SUBMIT</button>
+                </div>
+            </div>
+        </form>
+    <center> <h3> <p style="color:coral" id="res">   </p></h3></center>
+    </div>
+    <script>
+    function eva()
+    {
+    var m1=parseInt(document.getElementById("sem1").value);
+    var m2=parseInt(document.getElementById("sem2").value);
+    var m3=parseInt(document.getElementById("sem3").value);
+    var m4=parseInt(document.getElementById("sem4").value);
+    var m5=parseInt(document.getElementById("sem5").value);
+    var m6=parseInt(document.getElementById("sem6").value);
+    var m7=parseInt(document.getElementById("sem7").value);
+    var m8=parseInt(document.getElementById("sem8").value);
+    var n= parseInt(document.getElementById("enter").value);
+    var res =0;
+    if(n==1){
+    res=((m1)/1);
+    document.getElementById("res").innerHTML ="The CGPA is "+res;
+    }
+    else if(n==2){
+    res=((m1+m2)/2);
+    document.getElementById("res").innerHTML ="The CGPA is "+res;
+    }
+    else if(n==3){
+    res=((m1+m2+m3)/3);
+    document.getElementById("res").innerHTML ="The CGPA is "+res;
+    }
+    else if(n==4){
+    res=((m1+m2+m3+m4)/4);
+    document.getElementById("res").innerHTML ="The CGPA is "+res;
+    }
+    else if(n==5){
+    var res=((m1+m2+m3+m4+m5)/8);
+    document.getElementById("res").innerHTML ="The CGPA is "+res;
+    }
+    else if(n==6){
+    res=((m1+m2+m3+m4+m5+m6)/6);
+    document.getElementById("res").innerHTML ="The CGPA is "+res;
+    }
+    else if(n==7){
+    res=((m1+m2+m3+m4+m5+m6+m7)/7);
+    document.getElementById("res").innerHTML ="The CGPA is "+res;
+    }
+   else {
+    res=((m1+m2+m3+m4+m5+m6+m7+m8)/8);
+    document.getElementById("res").innerHTML ="The CGPA is "+res;
+    }
+
+}
+</script>
+</body>
+</html>
